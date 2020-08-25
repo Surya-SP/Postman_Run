@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "143a668f-33ba-4b5f-b370-057480778bf7",
+		"name": "COVID-19 India Tracker",
+		"description": "# COVID-19 India Tracker #\n* This API gives you the latest COVID-19 State wise and District wise data in India. This API is very simple to use and create awesome Portal.\n* We are using the most powerful and lightweight JSON format with simple List of State and Districts.\n\n## How to use? ##\nThe JSON response contains LIST of Indian State, every State contains LIST of Districts. Isn't simple...?\n## [COVID India Tracker](https://covidindiatracker.com/ \"COVID India Tracker\")\n(covidindiatracker.com)\n* All State API + Total Data [COVID India Tracker State wise API](https://api.covidindiatracker.com/state_data.json \"COVID India Tracker  State wise API\")\n* Only Total data API [COVID India Tracker Total API](https://api.covidindiatracker.com/total.json \"COVID India Tracker Total API\")\n* Support Portal -- [COVID India Tracker API Support](https://apkproz.com/contact-us \"Contact Us\")\n\n* Data sourced from COVID19India MOHFW Gov. Org. and Media\n\n## Response Sample ##\n`[\n    {\n        \"id\": \"IN-MH\",\n        \"state\": \"Maharashtra\",\n        \"active\": 6939,\n        \"confirmed\": 8590,\n        \"recovered\": 1282,\n        \"deaths\": 369,\n        \"cChanges\": 0,\n        \"rChanges\": 0,\n        \"dChanges\": 0,\n        \"districtData\": [\n            {\n                \"id\": \"Mumbai\",\n                \"state\": null,\n                \"name\": \"Mumbai\",\n                \"confirmed\": 5776,\n                \"recovered\": null,\n                \"deaths\": null,\n                \"oldConfirmed\": null,\n                \"oldRecovered\": null,\n                \"oldDeaths\": null\n            },\n            {\n                \"id\": \"Pune\",\n                \"state\": null,\n                \"name\": \"Pune\",\n                \"confirmed\": 1099,\n                \"recovered\": null,\n                \"deaths\": null,\n                \"oldConfirmed\": null,\n                \"oldRecovered\": null,\n                \"oldDeaths\": null\n            },\n            {\n                \"id\": \"Thane\",\n                \"state\": null,\n                \"name\": \"Thane\",\n                \"confirmed\": 752,\n                \"recovered\": null,\n                \"deaths\": null,\n                \"oldConfirmed\": null,\n                \"oldRecovered\": null,\n                \"oldDeaths\": null\n            }\n          ]\n        }\n]`\n\n** Note : The null values can be set for any future purpose\n\n* cChanges --> Daily changes in Confirmed Cases\n* rChanges --> Daily changes in Recovery Cases\n* dChanges --> Daily changes in Death Cases\n\n* oldConfirmed: Previous day old confirmed cases in specific districts,\n* oldRecovered: Previous day old recovered cases in specific districts,\n* oldDeaths: Previous day old deaths cases in specific districts\n\n### State ID codes useful for Mapping data into GeoMaps. ###\n  - id: IN-AN\n    name: Andaman and Nicobar Islands\n  - id: IN-AP\n    name: Andhra Pradesh\n  - id: IN-AR\n    name: Arunachal Pradesh\n  - id: IN-AS\n    name: Assam\n  - id: IN-BR\n    name: Bihar\n  - id: IN-CH\n    name: Chandigarh\n  - id: IN-CT\n    name: Chhattisgarh\n  - id: IN-DD\n    name: Daman and Diu\n  - id: IN-DL\n    name: Delhi\n  - id: IN-DN\n    name: Dadra and Nagar Haveli\n  - id: IN-GA\n    name: Goa\n  - id: IN-GJ\n    name: Gujarat\n  - id: IN-HP\n    name: Himachal Pradesh\n  - id: IN-HR\n    name: Haryana\n  - id: IN-JH\n    name: Jharkhand\n  - id: IN-LK\n    name: Ladakh\n  - id: IN-KA\n    name: Karnataka\n  - id: IN-KL\n    name: Kerala\n  - id: IN-LD\n    name: Lakshadweep\n  - id: IN-MH\n    name: Maharashtra\n  - id: IN-ML\n    name: Meghalaya\n  - id: IN-MN\n    name: Manipur\n  - id: IN-MP\n    name: Madhya Pradesh\n  - id: IN-MZ\n    name: Mizoram\n  - id: IN-NL\n    name: Nagaland\n  - id: IN-OR\n    name: Odisha\n  - id: IN-PB\n    name: Punjab\n  - id: IN-PY\n    name: Puducherry\n  - id: IN-RJ\n    name: Rajasthan\n  - id: IN-SK\n    name: Sikkim\n  - id: IN-TG\n    name: Telangana\n  - id: IN-TN\n    name: Tamil Nadu\n  - id: IN-TR\n    name: Tripura\n  - id: IN-UP\n    name: Uttar Pradesh\n  - id: IN-UT\n    name: Uttarakhand\n  - id: IN-WB\n    name: West Bengal\n  - id: IN-JK\n    name: Jammu and Kashmir\n\n* Build your own COVID19India Tracker using our API\n\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.covidindiatracker.com/state_data.json",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.covidindiatracker.com/state_data.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"covidindiatracker",
+						"com"
+					],
+					"path": [
+						"state_data.json"
+					]
+				},
+				"description": "COVID-19 Daily Updates from India state wise and district wise data."
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.covidindiatracker.com/state_data.json",
+							"protocol": "https",
+							"host": [
+								"api",
+								"covidindiatracker",
+								"com"
+							],
+							"path": [
+								"state_data.json"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "https://api.covidindiatracker.com/total.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.covidindiatracker.com/total.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"covidindiatracker",
+						"com"
+					],
+					"path": [
+						"total.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1652c694-9963-45c5-8219-435f3a6e28f4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f5ad8910-d33a-462d-98d5-49c3e32ddab8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
